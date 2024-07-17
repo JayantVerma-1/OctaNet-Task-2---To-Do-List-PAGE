@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Default Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==== Style for Body ==== */
+body {
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* ==== Style for Root ==== */
+#root {
+  margin: 10px;
+}
+
+/* ==== Style for Main and Main-2 IDs ==== */
+#main, #main-2 {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+}
+
+/* ==== Style for Containers ==== */
+#main-head-container, #main-head-container-2 {
+  font-size: 32px;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-card-btn {
+  position: absolute;
+  right: 10%;
+  top: 80px;
+  margin-bottom: 10px;
+}
+
+.uil-plus-circle {
+  font-size: 40px;
+  color: #ff9800;
+}
+
+#main-head-container-2 {
+  display: none;
+}
+
+#main-head-container p, #main-head-container-2 p {
+  color: #ff9800;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+#heading span {
+  color: #ffd700;
+}
+
+#head-1 {
+  font-weight: 700;
+}
+
+#new-text {
+  display: none;
+}
+
+#main-head-container button, #main-head-container-2 button {
+  background-color: transparent;
+  border: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+#add-btn-text, #add-btn-text-2 {
+  color: #ff9800;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* ==== Style for No Item ==== */
+.no-item {
+  width: auto;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  font-weight: 300;
+}
+
+/* ==== Style for Cards ==== */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 280px;
+  color: #f0f0f0;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card ul {
+  padding-top: 5px;
+  height: 300px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.card li {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card li span {
+  width: 50%;
+  text-align: center;
+}
+
+.btn-left {
+  width: 50%;
+}
+
+.card .edit-btn, .card .delete-btn {
+  margin-top: 10px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ff9800;
+  color: #fff;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+.card .add-sub-item-btn {
+  font-size: 20px;
+  color: #fff;
+  width: 33px;
+  height: 33px;
+  font-weight: bold;
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+.card .sub-btn {
+  width: 25px;
+  height: 30px;
+}
+
+#addtask-plus {
+  background-image: url(./img/add.jpg);
+  background-size: contain;
+  height: 35px;
+  width: 35px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+/* ==== Style for Popup Containers ==== */
+.popup-container, .popup2-container, .popup3-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.popup, .popup2, .popup3 {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  color: #f0f0f0;
+}
+
+.popup h2, .popup2 h2, .popup3 h2 {
+  margin-bottom: 10px;
+  color: #ff9800;
+}
+
+.popup input, .popup2 input, .popup3 input, .popup textarea, .popup2 textarea, .popup3 textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  resize: none;
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.popup button, .popup2 button, .popup3 button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.popup #add-card, .popup2 #add-item, .popup3 #add-sub-items {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.popup #cancel, .popup2 #cancel-item, .popup3 #cancel-sub-items {
+  background-color: #f44336;
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #main-head-container button, #main-head-container-2 button {
+    position: relative;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .popup, .popup3 {
+    width: 80%;
+  }
+}
+
+.editing {
+  color: #65c09f;
+}
+
+.deleting {
+  color: #e57373;
+}
+
+.done {
+  background-color: #fff;
+  border: none;
+}
+
+.dones {
+  border: 1px solid grey;
+  color: #fff;
+  border-radius: 50%;
+}
+
+strong {
+  color: #ffd700;
+}
+
+/* ====== Styles for Footer ====== */
+footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ff9800;
+}
+
+footer a:hover {
+  color: #4caf50;
+}
+
+.item-content-buttons {
+  text-align: center;
+}
+
+.done {
+  margin-top: 5px;
+  border-radius: 50%;
+}
